@@ -1,0 +1,37 @@
+<div class="container">
+  <label for="cartId">Valitse ostoskori: </label>
+  <input type="number" ng-model="amountService.cartId" name="cartId">
+  <div ng-repeat="product in products">
+      <div class="row top-buffer product-info">
+        <div class="col-md-6 col-lg-5">
+          <div class="product-image">
+            <img class="img-responsive" src={{product.image}} title="{{product.image_author}}"></img>
+          </div>
+        </div>
+        <div class="col-md-1 col-lg-2">
+        </div>
+        <div class="col-md-5 col-lg-5">
+          <strong>{{product.name}} {{product.price}}€ kpl</strong>
+          <p class="product-description"><strong>Pituus: {{product.length}}mm Leveys: {{product.width}}mm</strong> <br>
+            {{product.description}}</p>
+          <div class="container-fluid">
+          <form name="productOrderForm{{product.id}}" class="form-horizontal">
+              <div class="form-group">
+                <label for="quantity" class="col-sm-3 col-md-3 col-lg-6">Määrä:</label>
+                <div class="col-sm-8 col-md-8 col-lg-6">
+                  <input type="number" name="quantity" ng-model="quantity" required min="1">
+                  <span style="color:red" ng-show="productOrderForm{{product.id}}.quantity.$dirty && productOrderForm{{product.id}}.quantity.$invalid">
+                    <p>Määrä ei ole validi!</p>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Lisää ostoskoriin" ng-click="sendToShoppingCart(product.id, quantity)" class="btn btn-primary" ng-disabled="productOrderForm{{product.id}}.$invalid">
+              </div>
+          </form>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>

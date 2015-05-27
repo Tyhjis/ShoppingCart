@@ -1,0 +1,19 @@
+<div class="container">
+<strong>
+  Ostoskorissasi nro: {{amountService.cartId}} <ng-pluralize count="products.length" when="{'0': 'ei ole yhtään tuotetta.', 'one': 'on {} tuote.', 'other': 'on {} tuotetta.'}"></ng-pluralize>
+</strong>
+
+</p>
+
+<ul ng-repeat="product in products">
+<li><a href="#/products/{{product.productId}}">{{getProductName(product.productId)}}</a> ({{product.productAmount}} kpl)</li>
+</ul>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="cartId">Valitse kori: </label>
+    <input type="number" name="cartId" ng-model="amountService.cartId">
+    <button type="submit" class="btn btn-default" ng-click="selectCart()">Vaihda ostoskori</button>
+  </div>
+</form>
+</div>

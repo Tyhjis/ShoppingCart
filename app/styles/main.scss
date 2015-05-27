@@ -1,0 +1,176 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.navbar-default {
+  background-color: #00FF80;
+}
+
+.navbar-default .navbar-nav > li > a {
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: blue;
+}
+
+@media screen and (min-width: 1080px) {
+
+  .product-image {
+    border: solid;
+    border-radius: 5%;
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+  }
+
+  .product-description {
+    font-size: 1em;
+  }
+
+  .product-info {
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width: 1080px) {
+  .product-image {
+    border: solid;
+    border-radius: 5%;
+    overflow: auto;
+  }
+}
+
+.top-buffer {
+  margin-top: 2em;
+}
+
+#front-page-image {
+  background: url('/images/maisema.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+#footer-links li {
+  float: left;
+  list-style-type: none;
+  display: inline;
+  padding-right: 2em;
+}
+
+#shopping-cart-contents {
+  border: solid;
+  border-radius: 100%;
+  height:10px;
+  width:10px;
+}
+
+#message-container {
+  height: 2em;
+  overflow: auto;
+  background-color: orange;
+  position: fixed;
+  float: right;
+  opacity: 0.5;
+}
+
+#global-message {
+  text-align: center;
+}
